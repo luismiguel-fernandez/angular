@@ -1,0 +1,10 @@
+img {
+    width: 150px;
+}
+
+.articulo_vertical {
+    border: thin solid black;
+    width: 160px;
+    background-color: salmon;
+    float: left;
+}

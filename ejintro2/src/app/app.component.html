@@ -1,0 +1,8 @@
+<h1> Mi app {{title}} funciona </h1>
+
+<h3>Lista de componentes de un PC</h3>
+<ul>
+  <li *ngFor="let pieza of piezas">
+    <app-articulo [piezaparam]="pieza"></app-articulo>
+  </li>
+</ul>
