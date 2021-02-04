@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-articulo',
@@ -9,6 +9,8 @@ export class ArticuloComponent implements OnInit {
 
   @Input() piezaparam;
   
+  @Output() avisarAlPadre = new EventEmitter<string>();
+  
   constructor() {
 
    }
@@ -16,4 +18,7 @@ export class ArticuloComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  eliminar(nombre) {
+    this.avisarAlPadre.emit(nombre);    
+  }
 }

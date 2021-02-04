@@ -31,4 +31,10 @@ export class AppComponent {
     this.piezas.push(pieza1,pieza2)
 
   } //FIN DEL CONSTRUCTOR
+
+  removeItem(item: string) {
+    // va a intentar eliminar un elemento del array piezas
+    console.log("Componente padre: el parámetro es " + item)
+    //eliminar el elemento correcto a partir del nombre recibido como parámetro
+  }
 } // FIN DE LA CLASE
