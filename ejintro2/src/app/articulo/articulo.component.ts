@@ -19,6 +19,6 @@ export class ArticuloComponent implements OnInit {
   }
 
   eliminar(nombre) {
-    this.avisarAlPadre.emit(nombre);    
+    this.avisarAlPadre.emit(nombre);  
   }
 }

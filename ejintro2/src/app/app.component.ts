@@ -37,4 +37,4 @@ export class AppComponent {
     console.log("Componente padre: el parámetro es " + item)
     //eliminar el elemento correcto a partir del nombre recibido como parámetro
   }
-} // FIN DE LA CLASE
+} // FIN DE LA CLASE 
