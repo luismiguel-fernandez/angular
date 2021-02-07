@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-articulo',
@@ -10,6 +10,8 @@ export class ArticuloComponent implements OnInit {
   @Input() piezaparam;
   @Output() avisoAlPadre = new EventEmitter<string>();
   
+  @Output() avisarAlPadre = new EventEmitter<string>();
+  
   constructor() {
 
    }
@@ -17,10 +19,7 @@ export class ArticuloComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  borrar(item) {
-    console.log("soy el componente hijo");
-    console.table(item);
-    this.avisoAlPadre.emit(item);
+  eliminar(nombre) {
+    this.avisarAlPadre.emit(nombre);  
   }
-
 }

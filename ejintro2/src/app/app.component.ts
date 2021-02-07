@@ -32,7 +32,11 @@ export class AppComponent {
 
   } //FIN DEL CONSTRUCTOR
 
-  borrar(item) {
-    this.piezas = this.piezas.filter(elemento => elemento !== item)
+  removeItem(item: string) {
+    // va a intentar eliminar un elemento del array piezas
+    //console.log("Componente padre: el parámetro es " + item)
+    //eliminar el elemento correcto a partir del nombre recibido como parámetro
+    //console.table(this.piezas)
+    this.piezas = this.piezas.filter(pieza => pieza != item)
   }
-} // FIN DE LA CLASE
+} // FIN DE LA CLASE 

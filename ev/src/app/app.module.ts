@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ArticuloComponent } from './articulo/articulo.component';
+import { CarCardComponent } from './car-card/car-card.component';
+import { CarRowComponent } from './car-row/car-row.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArticuloComponent
+    CarCardComponent,
+    CarRowComponent
   ],
   imports: [
     BrowserModule
@@ -15,4 +17,4 @@ import { ArticuloComponent } from './articulo/articulo.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { } 
+export class AppModule { }
