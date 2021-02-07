@@ -31,4 +31,8 @@ export class AppComponent {
     this.piezas.push(pieza1,pieza2)
 
   } //FIN DEL CONSTRUCTOR
+
+  borrar(item) {
+    this.piezas = this.piezas.filter(elemento => elemento !== item)
+  }
 } // FIN DE LA CLASE
