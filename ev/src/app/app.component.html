@@ -73,21 +73,20 @@
       </table>
       <button class="btn btn-primary" id="resetFilters">Borrar filtros</button>
     </div>
-    <div id="modelos" class="col-lg-9">
-
-        <!-- RELLENAR CON UN LISTADO DE TODOS LOS MODELOS -->
-        <div class="row row-cols-md-5" *ngIf="vistaBigCard">
+    <div id="modelos" class="col-lg-9 bg-aqua">
+      <!-- RELLENAR CON UN LISTADO DE TODOS LOS MODELOS -->
+      <div *ngIf="loading">loading...</div>
+      <div class="row row-cols-md-5" *ngIf="vistaBigCard">
           <app-car-card  *ngFor="let coche of coches"
-            [cocheparam]="coche">
-          </app-car-card>
-        </div>
-
-        <div class="row row-cols-md-1" *ngIf="!vistaBigCard">
-         <app-car-row *ngFor="let coche of coches"
-            [cocheparam]="coche">
-          </app-car-row>
-        </div>
-
+          [cocheparam]="coche">
+        </app-car-card>
+      </div>
+      
+      <div class="row row-cols-md-1" *ngIf="!vistaBigCard">
+        <app-car-row *ngFor="let coche of coches"
+          [cocheparam]="coche">
+        </app-car-row>
+      </div>
     </div>
   </div> <!-- .row -->
 </div> <!-- .container -->

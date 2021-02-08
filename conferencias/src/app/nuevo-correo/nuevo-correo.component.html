@@ -1,0 +1,41 @@
+<h1>Nuevo correo</h1>
+
+<form [formGroup]="nuevoCorreo" (ngSubmit)="onSubmit()">
+    <div>
+    <fieldset>
+        <legend>Asunto </legend>
+        <input type="text" formControlName="asunto">
+        <blockquote *ngIf="submitted && nuevoCorreo.controls.asunto.errors">
+            <div *ngIf="nuevoCorreo.controls.asunto.errors.required">El asunto no puede estar vacío</div>
+            <div *ngIf="nuevoCorreo.controls.asunto.errors.minlength">El asunto debe tener al menos 3 caracteres</div>
+        </blockquote>
+    </fieldset>
+    </div>
+
+    <div>
+        <fieldset>
+        <legend>Cuerpo </legend>
+        <input type="textarea" formControlName="cuerpo">
+        <blockquote *ngIf="submitted && nuevoCorreo.controls.cuerpo.errors">
+            <div *ngIf="nuevoCorreo.controls.cuerpo.errors.required">El cuerpo no puede estar vacío</div>
+            <div *ngIf="nuevoCorreo.controls.cuerpo.errors.minlength">El cuerpo debe tener al menos 10 caracteres</div>
+        </blockquote>
+    </fieldset>
+    </div>
+
+    <div>
+        <fieldset>
+        <legend>Destinatario </legend>
+        <input type="text" formControlName="destinatario">
+        <blockquote *ngIf="submitted && nuevoCorreo.controls.destinatario.errors">
+            <div *ngIf="nuevoCorreo.controls.destinatario.errors.required">El destinatario no puede estar vacío</div>
+            <div *ngIf="nuevoCorreo.controls.destinatario.errors.email">El destinatario debe ser un email válido</div>
+        </blockquote>
+    </fieldset>
+    </div>
+
+    <div>
+        <button>Enviar</button>
+        <button type="reset" (click)="onReset()">Borrar</button>
+    </div>
+</form>>

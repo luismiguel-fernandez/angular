@@ -8,6 +8,7 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 export class ArticuloComponent implements OnInit {
 
   @Input() piezaparam;
+  @Output() avisoAlPadre = new EventEmitter<string>();
   
   @Output() avisarAlPadre = new EventEmitter<string>();
   
