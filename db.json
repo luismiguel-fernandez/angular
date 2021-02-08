@@ -29,6 +29,6 @@
       {"id":"27","text":null,"nombre":"i-MiEV","imagen":"img\/Mitsubishi_i-MIEV.jpg","precio":"24400","fabricante":"11","tecnologia":"1"},
       {"id":"28","text":null,"nombre":"Outlander PHEV","imagen":"img\/Mitsubishi_Outlander.jpg","precio":"47200","fabricante":"11","tecnologia":"3"},
       {"id":"29","text":null,"nombre":"LEAF","imagen":"img\/Nissan_LEAF_24Ah.jpg","precio":"29235","fabricante":"12","tecnologia":"1"},
-      {"id":"30","text":null,"nombre":"e-NV200","imagen":"img\/Nissan_E-NV200.jpg","precio":"25342","fabricante":"12","tecnologia":"1"},
+      {"id":"30","text":null,"nombre":"e-NV200","imagen":"img\/Nissan_E-NV200.jpg","precio":"25342","fabricante":"12","tecnologia":"1"}
     ]
 }
