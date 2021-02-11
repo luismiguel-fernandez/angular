@@ -7,12 +7,20 @@ import { Observable } from 'rxjs';
 })
 export class CarsService {
 
-  private url = 'http://my-json-server.typicode.com/luismiguel-fernandez/angular/coches'
+  private url = 'http://my-json-server.typicode.com/luismiguel-fernandez/angular/'
   
   constructor(private http: HttpClient) { }
   
   getCars() {
-    return this.http.get(this.url)
+    return this.http.get(this.url + "coches")
+  }
+
+  getMakers() {
+    return this.http.get(this.url + "fabricantes")
+  }
+
+  getTechs() {
+    return this.http.get(this.url + "tecnologias")
   }
 
   /*
