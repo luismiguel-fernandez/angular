@@ -5,7 +5,7 @@
     <tbody>
     <tr><td>
         <div class="form-group">
-        <input type="text" class="form-control" id="modelo" placeholder="Nombre del modelo">
+        <input type="text" class="form-control" id="modelo" #pattern placeholder="Nombre del modelo" (keyup)="nuevoPatron(pattern.value)">
         </div>
     </td></tr>
     </tbody>

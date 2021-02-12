@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   title = 'ev';
   vistaBigCard = true;
   loading = false;
+  patron = "";
 
   constructor(private carsService: CarsService) {
   }
@@ -32,7 +33,9 @@ export class AppComponent implements OnInit {
 
   cambiarVista() {
     this.vistaBigCard = !this.vistaBigCard
-    console.table(this.coches)
   }
 
+  filtrarCoches($event) {
+    this.patron = $event
+  }
 }

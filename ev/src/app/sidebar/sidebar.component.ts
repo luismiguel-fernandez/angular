@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarsService } from '../cars.service';
+import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,6 +11,7 @@ export class SidebarComponent implements OnInit {
 
   fabricantes;
   tecnologias;
+  @Output() patternChange = new EventEmitter<string>();
 
   constructor(private accesoDatos: CarsService) { }
 
@@ -19,13 +21,15 @@ export class SidebarComponent implements OnInit {
         this.fabricantes = data
       }
     )
-
     this.accesoDatos.getTechs().subscribe(
       (data) => {
         this.tecnologias = data
       }
     )
-
   } //ngOnInit
 
+  nuevoPatron(value: string) {
+    this.patternChange.emit(value)
+  }
+  
 } //class
