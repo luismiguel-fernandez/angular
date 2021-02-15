@@ -11,9 +11,14 @@ export class SidebarComponent implements OnInit {
 
   fabricantes;
   tecnologias;
+<<<<<<< HEAD
   @Output() eventoAvisarPadrePatronCambiado = new EventEmitter<string>();
   @Output() eventoAvisarPadreCambioFabricante = new EventEmitter<string>();
   
+=======
+  @Output() patternChange = new EventEmitter<string>();
+
+>>>>>>> 6612e3c9433d5b36ca14c5a48290562d6c89f9be
   constructor(private accesoDatos: CarsService) { }
 
   ngOnInit(): void {
@@ -37,4 +42,8 @@ export class SidebarComponent implements OnInit {
     this.eventoAvisarPadreCambioFabricante.emit(idFab)
   }
 
+  nuevoPatron(value: string) {
+    this.patternChange.emit(value)
+  }
+  
 } //class

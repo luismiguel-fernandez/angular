@@ -5,6 +5,7 @@
       <h1> EV - Tu base de datos de vehículos eléctricos</h1>
     </div>
   </div>
+<<<<<<< HEAD
 
   <div class="row">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,6 +25,27 @@
             <a class="nav-link" routerLink="/contacto">Contacto</a>
           </li>
         </ul>
+=======
+  <div class="row">
+    
+    <div class="col-lg-3">
+      <app-sidebar (patternChange)="filtrarCoches($event)"></app-sidebar>
+    </div>
+
+    <div id="modelos" class="col-lg-9 bg-aqua">
+      <!-- RELLENAR CON UN LISTADO DE TODOS LOS MODELOS -->
+      <div *ngIf="loading">loading...</div>
+      <div class="row row-cols-md-3" *ngIf="vistaBigCard">
+        <app-car-card *ngFor="let coche of coches | patternFilter:patron"
+                      [cocheparam]="coche">
+        </app-car-card>
+      </div>
+      
+      <div class="row row-cols-md-1" *ngIf="!vistaBigCard">
+        <app-car-row *ngFor="let coche of coches | patternFilter:patron"
+                     [cocheparam]="coche">
+        </app-car-row>
+>>>>>>> 6612e3c9433d5b36ca14c5a48290562d6c89f9be
       </div>
     </nav>
   </div> <!-- .row -->

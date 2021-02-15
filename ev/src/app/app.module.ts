@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { CarCardComponent } from './car-card/car-card.component';
 import { CarRowComponent } from './car-row/car-row.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+<<<<<<< HEAD
 import { FiltroPatronPipe } from './filtro-patron.pipe';
 import { FiltroFabricantePipe } from './filtro-fabricante.pipe';
 import { CatalogoCochesComponent } from './catalogo-coches/catalogo-coches.component';
@@ -22,6 +23,9 @@ const rutas = [
   { path: 'contacto', component: ContactoComponent},
   { path: '**', component: Pagina404Component}
 ]
+=======
+import { PatternFilterPipe } from './pattern-filter.pipe';
+>>>>>>> 6612e3c9433d5b36ca14c5a48290562d6c89f9be
 
 @NgModule({
   declarations: [
@@ -29,11 +33,15 @@ const rutas = [
     CarCardComponent,
     CarRowComponent,
     SidebarComponent,
+<<<<<<< HEAD
     FiltroPatronPipe,
     FiltroFabricantePipe,
     CatalogoCochesComponent,
     PresentacionComponent,
     ContactoComponent
+=======
+    PatternFilterPipe
+>>>>>>> 6612e3c9433d5b36ca14c5a48290562d6c89f9be
   ],
   imports: [
     BrowserModule,
