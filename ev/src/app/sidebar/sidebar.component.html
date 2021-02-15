@@ -5,7 +5,9 @@
     <tbody>
     <tr><td>
         <div class="form-group">
-        <input type="text" class="form-control" id="modelo" placeholder="Nombre del modelo">
+        <input #patron type="text" class="form-control"
+                id="modelo" placeholder="Nombre del modelo" (keyup)="cambiosEnPatron(patron.value)">
+
         </div>
     </td></tr>
     </tbody>
@@ -18,7 +20,7 @@
     <tr><td>
         <div class="form-group">
         <label for="fabList">Elige un fabricante</label>
-        <select class="form-control" id="fabList">
+        <select #fab class="form-control" id="fabList" (change)="cambioDeFabricante(fab.value)">
             <option value="0">(Elige un fabricante)</option>
             <!-- RELLENAR CON UN LISTADO DE TODOS LOS FABRICANTES -->
             <option *ngFor="let maker of fabricantes"
