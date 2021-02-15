@@ -10,10 +10,10 @@ import { FiltroPatronPipe } from './filtro-patron.pipe';
 import { FiltroFabricantePipe } from './filtro-fabricante.pipe';
 import { CatalogoCochesComponent } from './catalogo-coches/catalogo-coches.component';
 import { PresentacionComponent } from './presentacion/presentacion.component';
-
-import { RouterModule } from '@angular/router';
 import { ContactoComponent } from './contacto/contacto.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
+
+import { RouterModule } from '@angular/router';
 
 const rutas = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
