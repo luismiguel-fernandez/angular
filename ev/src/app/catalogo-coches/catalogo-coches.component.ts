@@ -33,7 +33,6 @@ export class CatalogoCochesComponent implements OnInit {
 
   cambiarVista() {
     this.vistaBigCard = !this.vistaBigCard
-    console.table(this.coches)
   }
 
   establecerNuevoFiltroPatron(patron) {

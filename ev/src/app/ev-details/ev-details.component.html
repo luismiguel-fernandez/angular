@@ -1,0 +1,13 @@
+<div *ngIf="ev$ | async as ev">
+  <h2>DETALLES DEL {{ ev.nombre }}</h2>
+  <img src="assets/{{ev.imagen}}" class="card-img-top">
+  <div>
+    Id: {{ ev.id }}
+  </div>
+  <div>
+    Nombre: {{ ev.nombre }}
+  </div>
+  <p>
+    <button (click)="gotoCatalogo()">Volver al catálogo</button>
+  </p>
+</div>

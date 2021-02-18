@@ -11,17 +11,10 @@ import { FiltroFabricantePipe } from './filtro-fabricante.pipe';
 import { CatalogoCochesComponent } from './catalogo-coches/catalogo-coches.component';
 import { PresentacionComponent } from './presentacion/presentacion.component';
 import { ContactoComponent } from './contacto/contacto.component';
-import { Pagina404Component } from './pagina404/pagina404.component';
 
-import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+import { EvDetailsComponent } from './ev-details/ev-details.component';
 
-const rutas = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: PresentacionComponent},
-  { path: 'catalogo', component: CatalogoCochesComponent},
-  { path: 'contacto', component: ContactoComponent},
-  { path: '**', component: Pagina404Component}
-]
 
 @NgModule({
   declarations: [
@@ -33,12 +26,13 @@ const rutas = [
     FiltroFabricantePipe,
     CatalogoCochesComponent,
     PresentacionComponent,
-    ContactoComponent
+    ContactoComponent,
+    EvDetailsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(rutas)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

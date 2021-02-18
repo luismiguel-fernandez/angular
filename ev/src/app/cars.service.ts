@@ -23,6 +23,9 @@ export class CarsService {
     return this.http.get(this.url + "tecnologias")
   }
 
+  getCar(id: number | string) {
+    return this.http.get(this.url + "coches/" + id)
+  }
   /*
   getCars() {
     return [
