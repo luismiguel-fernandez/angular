@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsultarTiempoService } from '../consultar-tiempo.service';
 import { ListaCiudadesService } from '../lista-ciudades.service';
-import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-anyadir-ciudad',
@@ -26,7 +25,7 @@ export class AnyadirCiudadComponent implements OnInit {
     this.consultarTiempo.getCiudadesPorPatron(patron).subscribe(
       (response) => {
         console.log('Response received');
-        console.table(response)
+        this.resultados = []
         response['list'].forEach(element => {
           let nuevoResultado = {
             id: element.id,
