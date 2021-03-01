@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsultarTiempoService } from '../consultar-tiempo.service';
 import { ListaCiudadesService } from '../lista-ciudades.service';
-import { MisCiudadesComponent } from '../mis-ciudades/mis-ciudades.component';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-anyadir-ciudad',
@@ -12,6 +12,9 @@ export class AnyadirCiudadComponent implements OnInit {
 
   resultados = []
 
+  msgAddCityOK = false
+  msgAddCityError = false
+
   constructor(private consultarTiempo:ConsultarTiempoService,
               private listaCiudades:ListaCiudadesService) { }
 
@@ -19,6 +22,7 @@ export class AnyadirCiudadComponent implements OnInit {
   }
 
   buscarCiudades(patron:string){
+    this.resultados = []
     this.consultarTiempo.getCiudadesPorPatron(patron).subscribe(
       (response) => {
         console.log('Response received');
@@ -39,11 +43,17 @@ export class AnyadirCiudadComponent implements OnInit {
     )
   }
 
-  addCiudad(id: number) {
-    console.log(`Vamos a añadir la ciudad con ID=${id}`)
-    //añadir la nueva ciudad al array de ciudades que está
-    // en el componente MisCiudades
-    this.listaCiudades.addCiudad(id)
+  addCiudad(nuevaCiudad:any) {
+    //añadir ciudad si no existe previamente
+    this.msgAddCityError = false
+    this.msgAddCityOK = false
+    if ( !this.listaCiudades.incluye(nuevaCiudad) ) {
+      this.listaCiudades.addCiudad(nuevaCiudad)
+      this.msgAddCityOK = true
+      setTimeout( () => this.msgAddCityOK = false, 3000)
+    } else {
+      this.msgAddCityError = true
+    }
   }
 
 }
