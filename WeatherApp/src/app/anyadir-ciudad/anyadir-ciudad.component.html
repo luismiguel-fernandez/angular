@@ -1,15 +1,29 @@
 <h2>Buscar ciudades</h2>
 
-<!-- <form> -->
+<form #f>
     <div class="form-group">
-      <!-- <label for="exampleInputEmail1">Email address</label> -->
       <input #patron type="text" class="form-control" id="patronCiudad" aria-describedby="emailHelp" placeholder="Introduce un nombre de ciudad">
     </div>
+
+    <div class="form-group">
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="onlySpain">
+        <label class="form-check-label" for="onlySpain">Sólo ubicaciones de España</label>
+      </div>
+    </div>
+
     <button type="button" (click)="buscarCiudades(patron.value)" class="btn btn-primary">Buscar</button>
-<!-- </form> -->
+</form>
+
+<div class="alert alert-success" role="alert" *ngIf="msgAddCityOK">
+  Ciudad añadida
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="msgAddCityError">
+  Ciudad no añadida porque ya está en la lista
+</div>
 
 <ul class="list-group">
-    <!-- <li class="list-group-item">Cras justo odio</li> -->
     <li *ngFor="let resultado of resultados"
         class="list-group-item"
         (click)="addCiudad(resultado.id)"

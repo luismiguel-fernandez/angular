@@ -12,6 +12,10 @@ export class AnyadirCiudadComponent implements OnInit {
 
   resultados = []
 
+  //Propiedades booleanas para mostrar o no mostrar mensajes al intentar añadir ciudades
+  msgAddCityOK = false
+  msgAddCityError = false
+
   constructor(private consultarTiempo:ConsultarTiempoService,
               private listaCiudades:ListaCiudadesService) { }
 
@@ -22,7 +26,7 @@ export class AnyadirCiudadComponent implements OnInit {
     this.consultarTiempo.getCiudadesPorPatron(patron).subscribe(
       (response) => {
         console.log('Response received');
-        console.table(response)
+        this.resultados = []
         response['list'].forEach(element => {
           let nuevoResultado = {
             id: element.id,
@@ -40,10 +44,16 @@ export class AnyadirCiudadComponent implements OnInit {
   }
 
   addCiudad(id: number) {
-    console.log(`Vamos a añadir la ciudad con ID=${id}`)
     //añadir la nueva ciudad al array de ciudades que está
-    // en el componente MisCiudades
-    this.listaCiudades.addCiudad(id)
+    // en el componente MisCiudades (comprobar si ya está en el array)
+    if (this.listaCiudades.getCiudades().includes(id)) {
+      this.msgAddCityOK = false
+      this.msgAddCityError = true
+    } else {
+      this.listaCiudades.addCiudad(id)
+      this.msgAddCityError = false
+      this.msgAddCityOK = true
+    }
   }
 
 }
