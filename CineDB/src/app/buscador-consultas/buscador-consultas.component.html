@@ -1,0 +1,38 @@
+<h3>Buscar</h3>
+
+<div class="row">
+    <div class="input-group mb-3">
+        <input #patron type="text" class="form-control" placeholder="Buscar por nombre"
+                aria-label="Buscar por nombre" aria-describedby="basic-addon2"
+                (keyup.enter)="buscarPeliculas(patron.value)">
+        <div class="input-group-append">
+            <button (click)="buscarPeliculas(patron.value)" class="btn btn-primary" type="button">
+                Buscar
+            </button>
+        </div>
+    </div>
+</div>
+
+<ng-container *ngIf="hayResultados">
+    <div class="row">
+        <h5>Resultados de búsqueda</h5>
+    </div>
+    <div class="row" *ngIf="msgAddFavOK">
+        <div class="alert alert-success" role="alert">
+            Favorito añadido
+        </div>
+    </div>
+    <div class="row" *ngIf="msgAddFavError">
+        <div class="alert alert-danger" role="alert">
+            Favorito ya existe
+        </div>
+    </div>
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let resultado of resultados"
+                (click)="addFavorito(resultado)">
+                {{resultado.Title}} ({{resultado.Year}})
+            </li>
+        </ul>
+    </div>
+</ng-container>

@@ -1,0 +1,10 @@
+<div class="card text-center bg-light mb-2 mr-2">
+    <a [routerLink]="['/detail',parametro.imdbID]">
+        <img src="{{parametro.Poster}}" class="card-img-top">
+    </a>
+    <div class="card-body">
+        <p class="card-text">{{parametro.Title}} ({{parametro.Year}})</p>
+        <button [routerLink]="['/detail',parametro.imdbID]" type="button" class="btn btn-primary">Detalles</button>
+        <button (click)="borrarFavorito(parametro.imdbID)" type="button" class="btn btn-danger">Borrar</button>
+    </div>
+  </div>

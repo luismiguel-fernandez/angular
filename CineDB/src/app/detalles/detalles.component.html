@@ -1,0 +1,51 @@
+<div class="row" *ngIf="favorito$ | async as fav">
+    <div class="col-7">
+        <dl>
+            <dt>Título</dt>
+            <dd>{{ fav.Title }}</dd>
+        </dl>
+        <dl>
+            <dt>Año</dt>
+            <dd>{{ fav.Year }}</dd>
+        </dl>
+        <dl>
+            <dt>Duración</dt>
+            <dd>{{ fav.Runtime }}</dd>
+        </dl>
+        <dl>
+            <dt>Géneros</dt>
+            <dd>{{ fav.Genre }}</dd>
+        </dl>
+        <dl>
+            <dt>Dirección</dt>
+            <dd>{{ fav.Director }}</dd>
+        </dl>
+        <dl>
+            <dt>Reparto</dt>
+            <dd>{{ fav.Actors }}</dd>
+        </dl>
+        <dl>
+            <dt>Sinopsis</dt>
+            <dd>{{ fav.Plot }}</dd>
+        </dl>
+        <dl>
+            <dt>País</dt>
+            <dd>{{ fav.Country }}</dd>
+        </dl>
+        <dl>
+            <dt>Enlace a IMDB</dt>
+            <dd><a href="https://www.imdb.com/title/{{fav.imdbID}}" target="_blank">{{fav.Title}} en IMDB</a></dd>
+        </dl>
+        <dl>
+            <dt>Puntuación de IMDB</dt>
+            <dd>{{ fav.imdbRating }}</dd>
+        </dl>
+        
+        <p>
+            <button type="button" class="btn btn-primary" (click)="gotoFavoritos()">Volver a Favoritos</button>
+        </p>
+    </div>
+    <div class="col-5">
+        <img src="{{fav.Poster}}" class="card-img-top">
+    </div>
+</div>

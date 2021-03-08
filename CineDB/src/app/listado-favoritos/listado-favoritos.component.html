@@ -1,0 +1,10 @@
+<h3>Favoritos: clic en una carátula para obtener más detalles</h3>
+
+<div class="row row-cols-md-5">
+    <div *ngIf="!getFavoritos().length" class="alert alert-warning" role="alert">
+        No tienes ningún favorito
+    </div>
+    <ng-container *ngFor="let fav of getFavoritos()">
+        <app-favorito [parametro]="fav"></app-favorito>
+    </ng-container>
+</div>
