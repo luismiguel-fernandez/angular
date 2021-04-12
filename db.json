@@ -1,0 +1,29 @@
+{
+  "eventos": [
+    {
+      "id": 1,
+      "nombre": "Cumpleaños Luismi",
+	  "fecha": "20-04-2021"
+    }
+  ],
+  "personas": [
+	{
+	  "id": 1,
+	  "nombre": "Luismi"
+	},
+	{
+	  "id": 2,
+	  "nombre": "Rodrigo"
+	}
+  ],
+  "asistencia": [
+    {
+	  "id_evento": 1,
+	  "id_persona": 1
+	},
+	{
+	  "id_evento": 1,
+	  "id_persona": 2
+	}
+  ]
+}
