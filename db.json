@@ -1,29 +1,18 @@
 {
-  "eventos": [
-    {
-      "id": 1,
-      "nombre": "Cumpleaños Luismi",
-	  "fecha": "20-04-2021"
-    }
-  ],
-  "personas": [
+  "profesores": [
 	{
 	  "id": 1,
 	  "nombre": "Luismi"
 	},
 	{
 	  "id": 2,
-	  "nombre": "Rodrigo"
+	  "nombre": "Fernado"
 	}
   ],
-  "asistencia": [
+  "modulos": [
     {
-	  "id_evento": 1,
-	  "id_persona": 1
-	},
-	{
-	  "id_evento": 1,
-	  "id_persona": 2
+	 "id": 1,
+	    "nombre": "DWEC"
 	}
   ]
 }
