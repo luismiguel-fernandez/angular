@@ -16,6 +16,7 @@ export class ModulosComponent implements OnInit {
     this.basedatos.getModulos().subscribe(
       (response) => {
         console.log(response)
+        this.modulos = response
       },
       (error) => {
         console.log("error")

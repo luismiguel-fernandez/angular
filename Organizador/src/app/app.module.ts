@@ -9,6 +9,7 @@ import { ChatComponent } from './chat/chat.component';
 import { ModulosComponent } from './modulos/modulos.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
 import { NuevoExamenComponent } from './nuevo-examen/nuevo-examen.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const rutas = [
   { path: 'calendario', component: CalendarioComponent },
@@ -28,7 +29,8 @@ const rutas = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(rutas),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
