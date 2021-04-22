@@ -1,1 +1,18 @@
-<p>calendario works!</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Módulo</th>
+            <th scope="col">Profesor</th>
+            <th scope="col">Fecha y hora</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let exam of examenes">
+            <tr>
+                <td>{{exam.id_mod}}</td>
+                <td>{{exam.id_prof}}</td>
+                <td>{{exam.fechahora}}</td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>

@@ -11,7 +11,7 @@ export class AccesoDatosService {
   constructor(private http:HttpClient) { }
 
   getProfesores() {
-
+    return this.http.get(this.url + "profesores")
   }
 
   getModulos() {
@@ -19,6 +19,6 @@ export class AccesoDatosService {
   }
 
   getExamenes() {
-
+    return this.http.get(this.url + "examenes")
   }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccesoDatosService } from '../acceso-datos.service';
 
 @Component({
   selector: 'app-profesores',
@@ -7,11 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfesoresComponent implements OnInit {
 
-  profesores = [ "Luismi" , "Fernando"]
+  profesores
 
-  constructor() { }
+  constructor(private basedatos:AccesoDatosService) { }
 
   ngOnInit(): void {
+    this.basedatos.getProfesores().subscribe(
+      (response) => {
+        this.profesores = response
+      },
+      (error) => {
+        console.error("error")
+      }
+    )  
   }
 
 }

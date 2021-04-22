@@ -19,7 +19,7 @@ export class ModulosComponent implements OnInit {
         this.modulos = response
       },
       (error) => {
-        console.log("error")
+        console.error("error")
       }
     )
   }
