@@ -8,6 +8,7 @@ import { CalendarioComponent } from './calendario/calendario.component';
 import { ChatComponent } from './chat/chat.component';
 import { ModulosComponent } from './modulos/modulos.component';
 import { ProfesoresComponent } from './profesores/profesores.component';
+import { NuevoExamenComponent } from './nuevo-examen/nuevo-examen.component';
 
 const rutas = [
   { path: 'calendario', component: CalendarioComponent },
@@ -18,7 +19,11 @@ const rutas = [
 @NgModule({
   declarations: [
     AppComponent,
-    ChatComponent
+    ChatComponent,
+    ProfesoresComponent,
+    ModulosComponent,
+    CalendarioComponent,
+    NuevoExamenComponent
   ],
   imports: [
     BrowserModule,

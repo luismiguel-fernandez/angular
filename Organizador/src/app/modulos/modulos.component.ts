@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccesoDatosService } from '../acceso-datos.service';
 
 @Component({
   selector: 'app-modulos',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModulosComponent implements OnInit {
 
-  constructor() { }
+  modulos
+
+  constructor(private basedatos:AccesoDatosService) { }
 
   ngOnInit(): void {
+    this.basedatos.getModulos().subscribe(
+      (response) => {
+        console.log(response)
+      },
+      (error) => {
+        console.log("error")
+      }
+    )
   }
 
 }

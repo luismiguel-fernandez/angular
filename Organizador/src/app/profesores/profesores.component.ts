@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfesoresComponent implements OnInit {
 
+  profesores = [ "Luismi" , "Fernando"]
+
   constructor() { }
 
   ngOnInit(): void {

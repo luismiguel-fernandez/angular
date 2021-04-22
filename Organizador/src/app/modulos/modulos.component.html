@@ -1,1 +1,20 @@
 <p>modulos works!</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Departamento</th>
+            <th scope="col">email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let mod of modulos">
+            <tr>
+                <td>{{mod.nombre}}</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </ng-container>
+    </tbody>
+</table>
