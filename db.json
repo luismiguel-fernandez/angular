@@ -2,17 +2,49 @@
   "profesores": [
 	{
 	  "id": 1,
-	  "nombre": "Luismi"
+	  "nombre": "Luis Miguel Fernández"
 	},
 	{
 	  "id": 2,
-	  "nombre": "Fernado"
+	  "nombre": "Fernando Ruiz"
+	},
+	{
+	  "id": 3,
+	  "nombre": "Susana Valverde"
+	},
+	{
+	  "id": 4,
+	  "nombre": "Beatriz de Miguel"
 	}
   ],
   "modulos": [
-    {
+   	{
 	 "id": 1,
 	    "nombre": "DWEC"
+	},
+	{
+	  "id": 2,
+	  "nombre": "DWES"
+	},
+	{
+	  "id": 3,
+	  "nombre": "DAW"
+	},
+	{
+	  "id": 4,
+	  "nombre": "DIW"
+	},
+	{
+	  "id": 5,
+	  "nombre": "LM"
 	}
+  ],
+  "examenes": [
+	  {
+		  "id": 1,
+		  "id_prof": 1,
+		  "id_mod": 1,
+		  "fechahora": "8:15 20/04/2021"
+	  }
   ]
 }
