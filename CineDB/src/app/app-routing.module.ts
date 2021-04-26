@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AgradecimientosComponent } from './agradecimientos/agradecimientos.component';
 import { BuscadorConsultasComponent } from './buscador-consultas/buscador-consultas.component';
-import { ConsultasComponent } from './consultas/consultas.component';
 import { DetallesComponent } from './detalles/detalles.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ListadoFavoritosComponent } from './listado-favoritos/listado-favoritos.component';
