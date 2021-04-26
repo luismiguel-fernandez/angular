@@ -61,5 +61,17 @@
 		  "fecha" : "23/04/2021",
 		  "hora": "10:05"
 	  }
+  ],
+  "chat": [
+	  {
+	   "id": 1,
+	   "autor": "Luismi",
+	   "texto": "Hola, primer mensaje del chat"
+	  },
+	   {
+	   "id": 2,
+	   "autor": "Adrián",
+	   "texto": "Hola, yo también participo"
+	  },
   ]
 }
