@@ -25,12 +25,14 @@ export class CalendarioComponent implements OnInit {
                 //ahora lanzo la 3ª paloma mensajera
                 this.basedatos.getExamenes().subscribe(
                   (response) => {
+                    let arraytemporal
+                    arraytemporal = response
                     //adaptar ese array examenes (donde ponga un ID = 1 tendrá que poner un nombre)
-                    response.forEach(examen => {
+                    arraytemporal.forEach(examen => {
                       examen.id_mod = this.getModByID(examen.id_mod)
                       examen.id_prof = this.getProfByID(examen.id_prof)
                     });
-                    this.examenes = response
+                    this.examenes = arraytemporal
                   },
                   (error) => {
                     console.error(error)
@@ -57,6 +59,7 @@ export class CalendarioComponent implements OnInit {
   }
 
   private getModByID(id:number) {
+
     let elElegido = this.modulos.filter( mod => mod.id == id)
     return elElegido[0].nombre
   }

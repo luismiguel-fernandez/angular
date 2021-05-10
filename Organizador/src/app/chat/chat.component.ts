@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccesoDatosService } from '../acceso-datos.service';
 
 @Component({
   selector: 'app-chat',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatComponent implements OnInit {
 
-  constructor() { }
+  mensajes
+
+  constructor(private basedatos:AccesoDatosService) { }
 
   ngOnInit(): void {
+    this.basedatos.getMensajes().subscribe(
+      (response) => {
+        this.mensajes = response
+      },
+      (error) => {
+        console.error("error")
+      }
+    )
   }
 
 }

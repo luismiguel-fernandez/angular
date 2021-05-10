@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Organizador": {
+    "CookieClicker": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Organizador",
+            "outputPath": "dist/CookieClicker",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,11 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": [
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -63,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Organizador:build"
+            "browserTarget": "CookieClicker:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Organizador:build:production"
+              "browserTarget": "CookieClicker:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Organizador:build"
+            "browserTarget": "CookieClicker:build"
           }
         },
         "test": {
@@ -111,16 +109,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Organizador:serve"
+            "devServerTarget": "CookieClicker:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Organizador:serve:production"
+              "devServerTarget": "CookieClicker:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Organizador"
+  "defaultProject": "CookieClicker"
 }

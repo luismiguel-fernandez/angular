@@ -1,0 +1,22 @@
+<h1>Store</h1>
+
+<div class="clipwrapper">
+    <img src="../../assets/img/buildings.png" alt="sprite" class="clip" style="clip:rect(0 64px 64px 0);" />
+</div>
+Tienes {{getNumberOfBuilding(0)}} cursores <br>
+Precio {{getPriceOfBuilding(0)}} <br>
+<button (click)="buyBuilding(0)" type="button" class="btn btn-primary btn-lg btn-block">Buy 1 Cursor</button>
+
+<div class="clipwrapper">
+    <img src="../../assets/img/buildings.png" alt="sprite" class="clip" style="clip:rect(64px 64px 128px 0); top: -64px;" />
+</div>
+Tienes {{getNumberOfBuilding(1)}} abuelas <br>
+Precio {{getPriceOfBuilding(1)}} <br>
+<button (click)="buyBuilding(1)" type="button" class="btn btn-primary btn-lg btn-block">Buy 1 Grandma</button>
+
+<div class="clipwrapper">
+    <img src="../../assets/img/buildings.png" alt="sprite" class="clip" style="clip:rect(192px 64px 256px 0); top: -192px;" />
+</div>
+Tienes {{getNumberOfBuilding(2)}} granjas <br>
+Precio {{getPriceOfBuilding(2)}} <br>
+<button (click)="buyBuilding(2)" type="button" class="btn btn-primary btn-lg btn-block">Buy 1 Farm</button>

@@ -21,4 +21,8 @@ export class AccesoDatosService {
   getExamenes() {
     return this.http.get(this.url + "examenes")
   }
+
+  getMensajes() {
+    return this.http.get(this.url + "chat")
+  }
 }
