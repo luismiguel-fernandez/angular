@@ -16,7 +16,6 @@ export class StoreComponent implements OnInit {
   buyBuilding(typeOfBuilding: number) {
     this.game.buyBuilding(typeOfBuilding)
   }
-<<<<<<< HEAD
 
   getNumberOfBuilding(typeOfBuilding: number) {
     return this.game.getNumberOfBuilding(typeOfBuilding)
@@ -24,6 +23,5 @@ export class StoreComponent implements OnInit {
   getPriceOfBuilding(typeOfBuilding: number) {
     return this.game.getPriceOfBuilding(typeOfBuilding)
   }
-=======
->>>>>>> 658982c54c5d1a99d0886b279793549cf1773528
 }
+
