@@ -1,0 +1,90 @@
+{
+  "categorias" : [
+	{
+	  "id": 1,
+      "nombre": "Procesadores"
+	},
+	{
+	  "id": 2,
+      "nombre": "Placas base"
+	},
+	{
+	  "id": 3,
+      "nombre": "Memoria RAM"
+	}
+  ],
+  "piezas" : [
+	{
+	  "id": 1,
+	  "cat": 1,
+      "nombre": "AMD Ryzen 5 3600",
+      "precio": 199.90,
+      "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/21/213019/5-3.jpg",
+      "stock": false
+    },
+	{
+	  "id": 2,
+	  "cat": 1,
+      "nombre": "AMD Ryzen 5 5600x",
+      "precio": 299.90,
+      "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/21/213019/5-3.jpg",
+      "stock": true
+    },
+	{
+	  "id": 3,
+	  "cat": 1,
+      "nombre": "Intel Core i7 11700KF",
+      "precio": 419.90,
+      "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/21/213019/5-3.jpg",
+      "stock": true
+    },
+    {
+	  "id": 4,
+	  "cat": 2,
+      "nombre": "MSI B550i",
+      "precio": 179.90,
+      "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/32/324454/1716-msi-mpg-b550i-gaming-edge-wifi.jpg",
+      "stock": true
+    },
+    {
+	  "id": 5,
+	  "cat": 2,
+      "nombre": "Otra placa",
+      "precio": 89.90,
+      "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/32/324454/1716-msi-mpg-b550i-gaming-edge-wifi.jpg",
+      "stock": true
+    },
+    {
+	  "id": 6,
+	  "cat": 2,
+      "nombre": "Y otra más",
+      "precio": 79.90,
+      "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/32/324454/1716-msi-mpg-b550i-gaming-edge-wifi.jpg",
+      "stock": false
+    },
+    {
+	  "id": 7,
+	  "cat": 3,
+      "nombre": "Kingston HyperX Fury Black DDR4 3200Mhz PC-25600 16GB 2x8GB CL16",
+      "precio": 101.60,
+      "imagen": "https://thumb.pccomponentes.com/w-220-220/articles/23/233960/hyperx-fury-ddr4-9-fan-kit-of-2.jpg",
+      "stock": true
+    },
+    {
+	  "id": 8,
+	  "cat": 3,
+      "nombre": "Otra RAM",
+      "precio": 59.90,
+      "imagen": "https://thumb.pccomponentes.com/w-220-220/articles/23/233960/hyperx-fury-ddr4-9-fan-kit-of-2.jpg",
+      "stock": false
+    },
+    {
+	  "id": 9,
+	  "cat": 3,
+      "nombre": "Más RAM",
+      "precio": 219.90,
+      "imagen": "https://thumb.pccomponentes.com/w-220-220/articles/23/233960/hyperx-fury-ddr4-9-fan-kit-of-2.jpg",
+      "stock": true
+    }
+  ]
+}
