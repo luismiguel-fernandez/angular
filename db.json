@@ -13,7 +13,7 @@
       "nombre": "Memoria RAM"
 	}
   ],
-  "piezas" : [
+  "articulos" : [
 	{
 	  "id": 1,
 	  "cat": 1,
